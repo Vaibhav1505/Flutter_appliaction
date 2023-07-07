@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(height: 25),
                       TextFormField(
                         decoration: InputDecoration(
-                          hintText: "Enter Username",
+                          hintText: "Enter Username",labelStyle: TextStyle(fontWeight: FontWeight.bold),
                           labelText: "Username",
                         ),
                         validator: (value) {
@@ -75,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
                       TextFormField(
                         obscureText: true,
                         decoration: InputDecoration(
-                          hintText: "Enter Password",
+                          hintText: "Enter Password",labelStyle: TextStyle(fontWeight: FontWeight.bold),
                           labelText: "Password",
                         ),
                         validator: (value) {
@@ -99,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: InkWell(
                           onTap: () => movetoHome(context),
                           child: AnimatedContainer(
-                            duration: Duration(seconds: 4),
+                            duration: Duration(seconds: 2),
                             height: 40,
                             width: changeButton ? 40 : 150,
                             alignment: Alignment.center,
