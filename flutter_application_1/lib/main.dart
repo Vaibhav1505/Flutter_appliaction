@@ -5,6 +5,7 @@ import 'pages/Login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'widgets/drawer.dart';
 import 'widgets/themes.dart';
+import 'package:hoverover/hoverover.dart';
 
 void main() {
   runApp(MyApp());
