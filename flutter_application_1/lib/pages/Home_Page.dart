@@ -13,6 +13,10 @@ class HomePage extends StatelessWidget {
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
       ),
+      body: ListView.builder(itemCount:CatalogItem.items.length,
+      itemBuilder:((context, index) {
+        return ItemWidget();
+      })),
       drawer: Mydrawer(),
     );
   }
