@@ -13,7 +13,7 @@ class Mydrawer extends StatelessWidget {
     return Drawer(
       width: 250,
       child: Container(
-        color: Colors.black,
+        color: Colors.deepPurple,
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -41,9 +41,8 @@ class Mydrawer extends StatelessWidget {
                           fontSize: 12),
                     ),
                     currentAccountPicture: CircleAvatar(
-                      backgroundImage:
-                          NetworkImage("assets/images/profile photo.jpg"),
-                    ),
+                        backgroundImage:
+                            NetworkImage("assets/images/profile photo.jpg")),
                   )),
             ),
             Container(
