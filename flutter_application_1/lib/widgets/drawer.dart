@@ -18,7 +18,7 @@ class Mydrawer extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             Container(
-              color: Colors.black,
+              color: Colors.deepPurple,
               child: DrawerHeader(
 
                   // decoration: BoxDecoration(color: Colors.black),
@@ -42,21 +42,25 @@ class Mydrawer extends StatelessWidget {
                     ),
                     currentAccountPicture: CircleAvatar(
                         backgroundImage:
-                            NetworkImage("assets/images/profile photo.jpg")),
+                            AssetImage('assets/images/profile photo.jpg')),
                   )),
+            ),
+            Divider(
+              color: Colors.black,
+              thickness: 1.5,
             ),
             Container(
               child: ListTile(
                 leading: Icon(
                   CupertinoIcons.home,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
                 title: Text(
                   "Home",
                   textScaleFactor: 1.2,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
               ),
@@ -64,42 +68,42 @@ class Mydrawer extends StatelessWidget {
             ListTile(
               leading: Icon(
                 CupertinoIcons.profile_circled,
-                color: Colors.white,
+                color: Colors.black,
               ),
               title: Text(
                 "Proile",
                 textScaleFactor: 1.2,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ),
             ListTile(
               leading: Icon(
                 CupertinoIcons.mail,
-                color: Colors.white,
+                color: Colors.black,
               ),
               title: Text(
                 "Email Me",
                 textScaleFactor: 1.2,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ),
             ListTile(
               leading: Icon(
                 CupertinoIcons.phone,
-                color: Colors.white,
+                color: Colors.black,
               ),
               title: Text(
                 "Call Me",
                 textScaleFactor: 1.2,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ),

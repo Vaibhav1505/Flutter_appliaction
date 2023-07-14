@@ -17,7 +17,7 @@ class ItemWidget extends StatelessWidget {
           print("${item.name} is pressed!");
         },
         leading: Image.network(
-          item.ImageUrl,
+          item.image,
         ),
         title: Text(
           item.name,
