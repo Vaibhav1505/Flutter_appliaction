@@ -2,48 +2,48 @@
     "products": [
         {
             "id": 1,
-            "name": "Pixel 1",
-            "desc": "This is pixel 1",
+            "name": "Pixel 1 Pro",
+            "desc": "This is the Pixel 1 Pro with Awesome Specifications.",
             "price": 299,
             "color": "black",
             "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel.jpg"
         },
         {
             "id": 2,
-            "name": "Pixel 2",
-            "desc": "This is pixel 2",
+            "name": "Pixel 2 Pro",
+            "desc": "This is Pixel 2 Pro an Upgrade of Pixel 1 Pro",
             "price": 399,
             "color": "black",
             "image": "https://m.media-amazon.com/images/I/41eVCMWXi7L.jpg"
         },
         {
             "id": 3,
-            "name": "Pixel 3",
-            "desc": "This is pixel 3 ",
+            "name": "Pixel 3 Pro",
+            "desc": "This is Pixel 3 with Awesome battey run whole day ",
             "price": 499,
             "color": "black",
             "image": "https://www.refurbished.store/cache/images/refurbished-google-pixel-3-black_600x600_BGresize_16777215-tj.png"
         },
         {
             "id": 4,
-            "name": "Pixel 4",
-            "desc": "This is pixel 4",
+            "name": "Pixel 4 Pro",
+            "desc": "This is Pixel 4 With Awesome Camera.",
             "price": 599,
             "color": "black",
             "image": "https://m.media-amazon.com/images/I/71xlN-a7s0L.jpg"
         },
         {
             "id": 5,
-            "name": "Pixel 5",
-            "desc": "This is pixel 5",
+            "name": "Pixel 5 Pro",
+            "desc": "This is Pixel 5 with Great Display and Fantastic Camera.",
             "price": 699,
             "color": "black",
             "image": "https://m.media-amazon.com/images/I/81-fNmQqlLL._AC_UF894,1000_QL80_.jpg"
         },
         {
             "id": 6,
-            "name": "Pixel 6",
-            "desc": "This is pixel 6",
+            "name": "Pixel 6 Pro",
+            "desc": "This is Pixel 6 with latest Google Tensor CPU.",
             "price": 799,
             "color": "black",
             "image": "https://m.media-amazon.com/images/I/71FpXTBHDnL.jpg"
