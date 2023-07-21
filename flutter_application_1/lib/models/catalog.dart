@@ -6,6 +6,16 @@ class CatalogModel {
     Item(1, "Pixel 1", "this is pixel 1", 299, "black",
         "https://fdn2.gsmarena.com/vv/bigpic/google-pixel.jpg")
   ];
+  static final catModel = CatalogModel._internal();
+  CatalogModel._internal();
+  factory CatalogModel() => catModel;
+
+  //get Item by ID-->
+  Item getById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
+
+  //get Item by Position-->
+  Item getByPosition(int pos) => items[pos];
 }
 
 class Item {

@@ -1,8 +1,12 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/models/cart.dart';
 import 'package:flutter_application_1/pages/home_detail_page.dart';
 import 'package:flutter_application_1/pages/home_widget/catalog_image.dart';
-import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
+
 import '../../models/catalog.dart';
 
 class CatalogList extends StatelessWidget {
@@ -55,38 +59,49 @@ class CatalogItem extends StatelessWidget {
                     buttonPadding: Vx.mOnly(top: 15, right: 20),
                     children: [
                       "\$${catalog.price}".text.bold.xl.make(),
-                      ElevatedButton(
-                          style: ButtonStyle(
-                              //padding: EdgeInsets.Vx.mOnly(right: 20),
-                              backgroundColor:
-                                  MaterialStateProperty.all(myTheme.DarkBluish),
-                              shape:
-                                  MaterialStateProperty.all(StadiumBorder())),
-                          onPressed: () {
-                            print("Object added to the Cart!");
-                          },
-                          child: const Text('Buy')),
+                      _AddToCart(catalog: catalog),
                     ]),
-                // ElevatedButton.icon(
-                //     style: ElevatedButton.styleFrom(
-                //         shape: RoundedRectangleBorder(
-                //             borderRadius: BorderRadius.circular(50))),
-                //     onPressed: () {
-                //       print("Object added to the Cart!");
-                //     },
-                //     icon: const Icon(Icons.shopping_cart),
-                //     label: const Text('Buy')),
-
-                // ElevatedButton(
-                //   style: ElevatedButton.styleFrom(
-                //       shape: RoundedRectangleBorder(
-                //           borderRadius: BorderRadius.circular(50))),
-                //   onPressed: () {},
-                //   child: "Buy".text.make(),
-                // )
               ]))
         ],
       ),
     ).white.py1.square(150).roundedLg.make().p8();
+  }
+}
+
+class _AddToCart extends StatefulWidget {
+  final Item catalog;
+  const _AddToCart({
+    Key? key,
+    required this.catalog,
+  }) : super(key: key);
+
+  @override
+  State<_AddToCart> createState() => _AddToCartState();
+}
+
+class _AddToCartState extends State<_AddToCart> {
+  bool isAdded = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+        onPressed: () {
+          isAdded = isAdded.toggle();
+          final _catalog = CatalogModel();
+
+          final _cart = CartModel();
+          _cart.catalog = _catalog;
+          _cart.add(widget.catalog);
+          setState(() {});
+          print("Object added to the Cart!");
+        },
+        style: ButtonStyle(
+            //padding: EdgeInsets.Vx.mOnly(right: 20),
+            backgroundColor: MaterialStateProperty.all(myTheme.DarkBluish),
+            shape: MaterialStateProperty.all(
+              StadiumBorder(),
+            )),
+        child:
+            isAdded ? Icon(Icons.done) : Icon(CupertinoIcons.cart_badge_plus));
   }
 }

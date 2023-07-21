@@ -1,7 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/catalog.dart';
-import 'package:flutter_application_1/pages/home_widget/catalog_image.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -15,7 +14,9 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       bottomNavigationBar: Container(
         color: Colors.white,
         child: ButtonBar(
@@ -32,8 +33,8 @@ class HomeDetailPage extends StatelessWidget {
                       onPressed: () {
                         print("Object added to the Cart!");
                       },
-                      child: "Buy".text.xl.bold.make())
-                  .wh(100, 50),
+                      child: "Add to Cart".text.xl.bold.make())
+                  .wh(140, 50),
             ]),
       ),
       backgroundColor: myTheme.CremColor,
@@ -57,11 +58,16 @@ class HomeDetailPage extends StatelessWidget {
                       catalog.name.text.bold.xl4
                           .color(myTheme.DarkBluish)
                           .make(),
-                      catalog.desc.text
+                      catalog.desc.text.center
                           .textStyle(context.captionStyle)
                           .xl
                           .make(),
                       10.heightBox,
+                      "Duo elitr elitr labore et sed gubergren sit. Magna rebum aliquyam rebum dolore. Vero takimata no ipsum labore diam diam elitr amet. Voluptua sit dolore gubergren no ea, stet et."
+                          .text
+                          .textStyle(context.captionStyle)
+                          .make()
+                          .p16()
                     ],
                   ).py64(),
                 ),
